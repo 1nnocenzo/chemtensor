@@ -3,11 +3,11 @@
 #ifdef __APPLE__
 
 #include <Accelerate/Accelerate.h>
+#include <lapack_types.h>
 
-typedef int lapack_int;
-typedef float lapack_real;
-typedef double lapack_dreal;
-
+typedef __LAPACK_int lapack_int;
+typedef __LAPACK_float_complex lapack_real;
+typedef __LAPACK_double_complex lapack_dreal;
 
 #define LAPACK_cbdsqr cbdsqr_
 #define LAPACK_cgbbrd cgbbrd_
